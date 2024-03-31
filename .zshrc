@@ -13,8 +13,10 @@ source ~/.zsh_env_vars
 # alias
 alias v="nvim"
 alias t="tmux"
+alias ta="tmux attach"
 alias c="clear"
 alias lg="lazygit"
 alias sz="source ~/.zshrc"
 alias ..="cd .."
 alias la="ls -la"
+alias ll="ls -l"

@@ -1,0 +1,12 @@
+[user]
+  name = Terry Lockett
+  email = 5551818+terrylockett@users.noreply.github.com
+
+[includeIf "gitdir:~/ibm/"]
+  path = ~/.gitconfig-work
+
+[core]
+  autocrlf = input
+
+[pager]
+  branch = false

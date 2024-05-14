@@ -14,9 +14,6 @@ return {
 		end
 	},
 	{
-		url = "https://gitlab.com/schrieveslaach/sonarlint.nvim.git"
-	},
-	{
 		"neovim/nvim-lspconfig",
 		config = function()
 			local lspconfig = require('lspconfig')
@@ -27,26 +24,28 @@ return {
 				filetypes = {"groovy", "gradle"},
 			})
 			lspconfig.tsserver.setup({})
-			require('sonarlint').setup({
-				server = {
-					cmd = {
-						'sonarlint-language-server',
-						'-stdio',
-						'-analyzers',
-						vim.fn.expand("$MASON/share/sonarlint-analyzers/sonarpython.jar"),
-						vim.fn.expand("$MASON/share/sonarlint-analyzers/sonarcfamily.jar"),
-						vim.fn.expand("$MASON/share/sonarlint-analyzers/sonarjava.jar"),
-					}
-				},
-				filetypes = {
-					--'python',
-					--'cpp',
-					'java',
-				}
-			})
 			lspconfig.rust_analyzer.setup({})
       lspconfig.kotlin_language_server.setup({})
+      lspconfig.urest_lsp.setup({})
 
 		end
-	}
+	},
+  {
+    url = "https://gitlab.com/schrieveslaach/sonarlint.nvim.git",
+    config = function()
+      require('sonarlint').setup({
+        server = {
+          cmd = {
+            'sonarlint-language-server',
+            '-stdio',
+            '-analyzers',
+            vim.fn.expand("$MASON/share/sonarlint-analyzers/sonarjava.jar"),
+          },
+        },
+        filetypes = {
+          'java',
+        }
+      })
+    end
+  },
 }

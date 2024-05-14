@@ -1,5 +1,7 @@
 require("terry.remap")
+-- require("terry.urest-test")
 require("terry.vim-options")
+require("terry.vim-plug")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then

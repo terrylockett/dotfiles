@@ -14,7 +14,8 @@ return {
 				"vim",
 				"vimdoc",
 				"javascript",
-				"typescript"
+				"typescript",
+        "markdown"
 			},
 			sync_install = false,
 			highlight = { enable = true },

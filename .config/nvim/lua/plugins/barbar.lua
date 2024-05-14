@@ -10,10 +10,10 @@ return {
 				-- default, powerline, slanted
 				preset = 'default',
 			},
-			sidebar_filetypes = {
-				NvimTree = true,
-				['neo-tree'] = {event = 'BufWipeout'}
-			},
+			-- sidebar_filetypes = {
+			-- 	NvimTree = true,
+			-- 	['neo-tree'] = {event = 'BufWipeout'}
+			-- },
 		})
 	end
 }

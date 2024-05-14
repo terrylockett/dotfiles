@@ -14,12 +14,12 @@ return {
 			require("telescope").setup {
 				defaults = {
 					i = {
-						['<C-p>'] = require('telescope.actions.layout').toggle_preview
+						-- ['<C-p>'] = require('telescope.actions.preview').toggle_preview
 					},
 					preview = {
 						hide_on_startup = true
 					},
-				},
+        },
 				extensions = {
 					["ui-select"] = {
 						require("telescope.themes").get_dropdown {

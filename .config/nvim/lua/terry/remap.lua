@@ -1,6 +1,9 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
+
+-- ccim.keymap.set('n', '<C-p>', function() require('telescope.actions.layout').toggle_preview() end)
+
 -- JDTLS
 vim.keymap.set('n', '<M-r>', function() require("jdtls").update_project_config({select_mode="all"}) end)
 	-- refactor stuff
@@ -8,7 +11,8 @@ vim.keymap.set('n', '<M-r>', function() require("jdtls").update_project_config({
 
 -- NeoTree
 vim.keymap.set("n", "<M-1>", ":Neotree filesystem reveal left<CR>")
-vim.keymap.set("n", "<M-!>", ":Neotree filesystem close<CR>")
+vim.keymap.set("n", "<leader>n", ":Neotree filesystem reveal left<CR>")
+-- vim.keymap.set("n", "<leader>n", ":Neotree filesystem close<CR>")
 
 -- LSP
 vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
@@ -24,12 +28,12 @@ vim.keymap.set('n', '<M-3>', function() require("trouble").toggle() end)
 
 
 --ToggleTerminal
-vim.keymap.set('n', '<M-2>', "<Cmd>:ToggleTerm<CR>")
+-- vim.keymap.set('n', '<M-2>', "<Cmd>:ToggleTerm<CR>")
 
 -- Debug Adapter
 vim.keymap.set("n", "<leader>b", function() require'dap'.toggle_breakpoint() end)
 
--- NetoTest
+-- NeoTest
 vim.keymap.set("n", "<leader>tc", function() require("neotest").run.run(vim.fn.expand("%")) end)
 vim.keymap.set("n", "<leader>tm", function() require("neotest").run.run() end)
 vim.keymap.set("n", "<leader>td", function() require("neotest").run.run({strategy = "dap"}) end)
@@ -45,8 +49,8 @@ vim.keymap.set("n", "<leader>tl", function() require("neotest").run.run({vim.fn.
 	-- move tabs 
 vim.keymap.set('n', '<M-[>', '<Cmd>BufferPrevious<CR>', {})
 vim.keymap.set('n', '<M-]>', '<Cmd>BufferNext<CR>', {})
--- vim.keymap.set('n', '<C-[>', '<Cmd>BufferPrevious<CR>', {})
--- vim.keymap.set('n', '<C-]>', '<Cmd>BufferNext<CR>', {})
+vim.keymap.set('n', '<leader>,', '<Cmd>BufferPrevious<CR>', {})
+vim.keymap.set('n', '<leader>.', '<Cmd>BufferNext<CR>', {})
 
 	-- reorder tabs
 vim.keymap.set('n', '<M->>', '<Cmd>BufferMoveNext<CR>', {})
@@ -56,3 +60,9 @@ vim.keymap.set('n', '<M-w>', '<Cmd>BufferClose<CR>', {})
 -- Global diagnostic Mappins
 -- vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float)
 -- vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
+
+
+
+-- Escape 
+-- vim.keymap.set({"n", "v"}, "<leader>e", require("escape").escape, { noremap = true, silent = true })
+

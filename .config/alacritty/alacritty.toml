@@ -24,6 +24,13 @@ style="Italic"
 family="jetbrainsmono nerd font"
 style="Bold Italic"
 
+
+[keyboard]
+bindings = [
+  # stop my fat fingers from closing terminal
+  {key= "W", mods= "Command", action= "None" }
+]
+
 [window]
 decorations="none"
-option_as_alt="onlyLeft"
+option_as_alt="both"

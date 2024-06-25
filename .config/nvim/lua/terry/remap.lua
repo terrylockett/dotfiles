@@ -10,8 +10,9 @@ vim.keymap.set('n', '<M-r>', function() require("jdtls").update_project_config({
 --vim.keymap.set('n', '<M-rp>', function() require("jdtls").update_project_config() end)
 
 -- NeoTree
-vim.keymap.set("n", "<M-1>", ":Neotree filesystem reveal left<CR>")
+-- vim.keymap.set("n", "<M-1>", ":Neotree filesystem reveal left<CR>")
 vim.keymap.set("n", "<leader>n", ":Neotree filesystem reveal left<CR>")
+vim.keymap.set("n", "<leader>N", ":Neotree filesystem close<CR>")
 -- vim.keymap.set("n", "<leader>n", ":Neotree filesystem close<CR>")
 
 -- LSP
@@ -62,6 +63,9 @@ vim.keymap.set('n', '<M-w>', '<Cmd>BufferClose<CR>', {})
 -- vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
 
 
+vim.keymap.set('n', '<leader>gf', function() vim.lsp.buf.format( {
+  filter = function(client) return client.name ~= 'jdtls' end
+}) end, {})
 
 -- Escape 
 -- vim.keymap.set({"n", "v"}, "<leader>e", require("escape").escape, { noremap = true, silent = true })

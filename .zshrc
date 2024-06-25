@@ -20,3 +20,12 @@ alias sz="source ~/.zshrc"
 alias ..="cd .."
 alias la="ls -la"
 alias ll="ls -l"
+
+alias google-java-format="java -jar ~/Downloads/google-java-format-1.22.0-all-deps.jar"
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/terry/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

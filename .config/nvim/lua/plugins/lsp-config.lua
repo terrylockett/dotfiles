@@ -9,7 +9,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = {"lua_ls", "gradle_ls", "groovyls", "tsserver", "rust_analyzer", "kotlin_language_server"}
+				ensure_installed = {"lua_ls", "gradle_ls", "groovyls", "tsserver", "rust_analyzer", "kotlin_language_server", "lemminx"}
 			})
 		end
 	},
@@ -26,7 +26,30 @@ return {
 			lspconfig.tsserver.setup({})
 			lspconfig.rust_analyzer.setup({})
       lspconfig.kotlin_language_server.setup({})
-      lspconfig.urest_lsp.setup({})
+      lspconfig.lemminx.setup({
+        cmd = {
+          "java",
+          "-cp",
+          "/Users/terry/github/lemminx/org.eclipse.lemminx/target/org.eclipse.lemminx-uber.jar:/Users/terry/ibm/urest-lemminx/lib/build/libs/*",
+          "org.eclipse.lemminx.XMLServerLauncher"
+        },
+        settings = {
+          xml= {
+            catalogs = {
+              "/Users/terry/ibm/urest-lemminx/catalog/urest_catalog_v1.xml",
+              "/Users/terry/ibm/urest-lemminx/catalog/urest_catalog_v2.xml",
+              "/Users/terry/ibm/urest-lemminx/catalog/urest_catalog_param_v1.xml",
+              "/Users/terry/ibm/urest-lemminx/catalog/urest_catalog_param_v2.xml",
+            },
+            extension = {
+              jars = {
+                "/Users/terry/ibm/urest-lemminx/lib/build/libs/lib.jar"
+              },
+            },
+          }
+        }
+      })
+
 
 		end
 	},
@@ -36,10 +59,13 @@ return {
       require('sonarlint').setup({
         server = {
           cmd = {
-            'sonarlint-language-server',
+            -- 'sonarlint-language-server',
+            os.getenv("JAVA_SE_17") .. '/bin/java',
+            '-jar',
+            vim.fn.expand('$MASON/packages/sonarlint-language-server/extension/server/sonarlint-ls.jar'),
             '-stdio',
             '-analyzers',
-            vim.fn.expand("$MASON/share/sonarlint-analyzers/sonarjava.jar"),
+            vim.fn.expand('$MASON/share/sonarlint-analyzers/sonarjava.jar'),
           },
         },
         filetypes = {

@@ -1,5 +1,3 @@
-print("hello Java")
-
 
 local bundles = {
   vim.fn.glob(os.getenv("JAVA_DEBUG"), 1),

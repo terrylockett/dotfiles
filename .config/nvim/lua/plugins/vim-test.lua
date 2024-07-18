@@ -1,5 +1,8 @@
 return {
-  "vim-test/vim-test",
+  -- "vim-test/vim-test",
+  -- { "terrylockett/vim-test", branch = "force-gradle-wrapper" },
+  "terrylockett/vim-test", 
+  branch = "force-gradle-wrapper",
   dependencies = {
     "preservim/vimux"
   },

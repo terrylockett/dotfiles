@@ -9,7 +9,16 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = {"lua_ls", "gradle_ls", "groovyls", "tsserver", "rust_analyzer", "kotlin_language_server", "lemminx"}
+        ensure_installed = {
+          "lua_ls", 
+          "gradle_ls", 
+          "groovyls", 
+          "tsserver", 
+          "rust_analyzer", 
+          "kotlin_language_server", 
+          "lemminx", 
+          "pyright"
+        }
 			})
 		end
 	},
@@ -26,6 +35,7 @@ return {
 			lspconfig.tsserver.setup({})
 			lspconfig.rust_analyzer.setup({})
       lspconfig.kotlin_language_server.setup({})
+      lspconfig.pyright.setup({})
       lspconfig.lemminx.setup({
         cmd = {
           "java",
@@ -56,16 +66,19 @@ return {
   {
     url = "https://gitlab.com/schrieveslaach/sonarlint.nvim.git",
     config = function()
+      -- I dont know why $MASON doesnt always evaluatei, so i hard coded it.
+      local masonPath = '/Users/terry/.local/share/nvim/mason'
       require('sonarlint').setup({
         server = {
           cmd = {
-            -- 'sonarlint-language-server',
             os.getenv("JAVA_SE_17") .. '/bin/java',
             '-jar',
-            vim.fn.expand('$MASON/packages/sonarlint-language-server/extension/server/sonarlint-ls.jar'),
+            -- vim.fn.expand('$MASON/packages/sonarlint-language-server/extension/server/sonarlint-ls.jar'),
+            vim.fn.expand(masonPath .. '/packages/sonarlint-language-server/extension/server/sonarlint-ls.jar'),
             '-stdio',
             '-analyzers',
-            vim.fn.expand('$MASON/share/sonarlint-analyzers/sonarjava.jar'),
+            -- vim.fn.expand('$MASON/share/sonarlint-analyzers/sonarjava.jar'),
+            vim.fn.expand(masonPath .. '/share/sonarlint-analyzers/sonarjava.jar'),
           },
         },
         filetypes = {

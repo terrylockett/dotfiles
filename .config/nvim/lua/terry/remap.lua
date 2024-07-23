@@ -1,19 +1,20 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
-
+-- Telescope
 -- ccim.keymap.set('n', '<C-p>', function() require('telescope.actions.layout').toggle_preview() end)
 
 -- JDTLS
 vim.keymap.set('n', '<M-r>', function() require("jdtls").update_project_config({select_mode="all"}) end)
-	-- refactor stuff
---vim.keymap.set('n', '<M-rp>', function() require("jdtls").update_project_config() end)
+vim.keymap.set('n', '<M-~>', function() require('jdtls.setup').wipe_data_and_restart()  end)
+
+vim.keymap.set('n', '<leader>gf', function() vim.lsp.buf.format( {
+  filter = function(client) return client.name ~= 'jdtls' end
+}) end, {})
 
 -- NeoTree
--- vim.keymap.set("n", "<M-1>", ":Neotree filesystem reveal left<CR>")
 vim.keymap.set("n", "<leader>n", ":Neotree filesystem reveal left<CR>")
 vim.keymap.set("n", "<leader>N", ":Neotree filesystem close<CR>")
--- vim.keymap.set("n", "<leader>n", ":Neotree filesystem close<CR>")
 
 -- LSP
 vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
@@ -26,10 +27,6 @@ vim.keymap.set('n', '<leader>o', vim.diagnostic.open_float, {})
 
 -- Trouble
 vim.keymap.set('n', '<M-3>', function() require("trouble").toggle() end)
-
-
---ToggleTerminal
--- vim.keymap.set('n', '<M-2>', "<Cmd>:ToggleTerm<CR>")
 
 -- Debug Adapter
 vim.keymap.set("n", "<leader>b", function() require'dap'.toggle_breakpoint() end)
@@ -48,8 +45,6 @@ vim.keymap.set("n", "<leader>tl", function() require("neotest").run.run({vim.fn.
 
 -- BarBar
 	-- move tabs 
-vim.keymap.set('n', '<M-[>', '<Cmd>BufferPrevious<CR>', {})
-vim.keymap.set('n', '<M-]>', '<Cmd>BufferNext<CR>', {})
 vim.keymap.set('n', '<leader>,', '<Cmd>BufferPrevious<CR>', {})
 vim.keymap.set('n', '<leader>.', '<Cmd>BufferNext<CR>', {})
 
@@ -63,9 +58,6 @@ vim.keymap.set('n', '<M-w>', '<Cmd>BufferClose<CR>', {})
 -- vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
 
 
-vim.keymap.set('n', '<leader>gf', function() vim.lsp.buf.format( {
-  filter = function(client) return client.name ~= 'jdtls' end
-}) end, {})
 
 -- Escape 
 -- vim.keymap.set({"n", "v"}, "<leader>e", require("escape").escape, { noremap = true, silent = true })

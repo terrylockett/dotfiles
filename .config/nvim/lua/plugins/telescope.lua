@@ -4,6 +4,7 @@ return {
 		dependencies = { "nvim-lua/plenary.nvim" },
 		config = function()
 			local builtin = require('telescope.builtin')
+			-- TODO move to rempa file
 			vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 			vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 		end
@@ -13,9 +14,6 @@ return {
 		config = function()
 			require("telescope").setup {
 				defaults = {
-					i = {
-						-- ['<C-p>'] = require('telescope.actions.preview').toggle_preview
-					},
 					preview = {
 						hide_on_startup = true
 					},

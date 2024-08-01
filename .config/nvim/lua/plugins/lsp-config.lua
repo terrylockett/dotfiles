@@ -10,13 +10,13 @@ return {
 		config = function()
 			require("mason-lspconfig").setup({
         ensure_installed = {
-          "lua_ls", 
-          "gradle_ls", 
-          "groovyls", 
-          "tsserver", 
-          "rust_analyzer", 
-          "kotlin_language_server", 
-          "lemminx", 
+          "lua_ls",
+          "gradle_ls",
+          "groovyls",
+          "tsserver",
+          "rust_analyzer",
+          "kotlin_language_server",
+          "lemminx",
           "pyright"
         }
 			})

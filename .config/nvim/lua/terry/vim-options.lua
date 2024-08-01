@@ -1,13 +1,19 @@
---vim.cmd("set tabstop=4")
---vim.cmd("set shiftwidth=4")
--- vim.cmd("set autoindent")
--- vim.opt.smartindent = false
-
-vim.cmd("set tabstop=2")
+vim.cmd("set tabstop=4")
 vim.cmd("set softtabstop=2")
-vim.cmd("set shiftwidth=2")
-vim.cmd("set expandtab")
+vim.cmd("set shiftwidth=4")
+vim.cmd("set noexpandtab") -- tabs goat 
+vim.cmd("set smartindent")
 
+-- Set listchars
+vim.opt.listchars = {
+  eol = '¶',
+  space = "·",
+	tab = '» ',
+  trail = '·',
+  extends = '›',
+  precedes = '‹'
+}
+vim.opt.list = true
 
 -- vim spell check (z= for suggestions)(zg add to dict)
 vim.opt.spelllang = 'en_us'

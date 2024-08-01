@@ -2,9 +2,7 @@ return {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
 	config = function()
-		-- TreeSitter
 		local tsConfigs = require("nvim-treesitter.configs")
-
 		tsConfigs.setup({
 			ensure_installed = {
 				"java",

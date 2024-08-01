@@ -1,7 +1,8 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
--- Telescope
+-- Telescope 
+-- TODO this doesnt work :(
 -- ccim.keymap.set('n', '<C-p>', function() require('telescope.actions.layout').toggle_preview() end)
 
 -- JDTLS
@@ -53,12 +54,4 @@ vim.keymap.set('n', '<M->>', '<Cmd>BufferMoveNext<CR>', {})
 vim.keymap.set('n', '<M-<>', '<Cmd>BufferMovePrevious<CR>', {})
 	--close Buffer
 vim.keymap.set('n', '<M-w>', '<Cmd>BufferClose<CR>', {})
--- Global diagnostic Mappins
--- vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float)
--- vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
-
-
-
--- Escape 
--- vim.keymap.set({"n", "v"}, "<leader>e", require("escape").escape, { noremap = true, silent = true })
 

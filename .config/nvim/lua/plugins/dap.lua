@@ -1,3 +1,4 @@
+-- TODO figure out debugger for java
 return {
 	'mfussenegger/nvim-dap',
 	--config = function()

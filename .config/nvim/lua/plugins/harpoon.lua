@@ -6,6 +6,7 @@ return {
 		local harpoon = require("harpoon")
 		harpoon:setup()
 
+		-- Move these to remap file
 		vim.keymap.set('n', '<leader>ha', function() harpoon:list():append() end)
 		vim.keymap.set('n', '<leader>he', function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 

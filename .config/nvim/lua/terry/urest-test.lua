@@ -1,4 +1,3 @@
--- local client = vim.lsp.start_client {
 --
 
 local launch_urest_lsp = function()
@@ -28,30 +27,3 @@ vim.api.nvim_create_user_command(
   launch_urest_lsp,
   {desc = 'Start urest server'}
 )
-
-
--- vim.api.nvim_create_autocmd('LspAttach', {
---   callback = function(args)
---     -- vim.keymap.set({'n', 'v'}, '<a-CR>', vim.lsp.buf.code_action, { buffer = args.buf, silent = true })
---     vim.notify "buff attached :)"
---   end
--- })
-
-
-
-
-
-
---
--- if not client then
---   vim.notify "lsp client didnt attach good"
---   return
--- end
---
--- vim.api.nvim_create_autocmd("FileType", {
---   pattern = "xml",
---   callback = function()
---     vim.notify "XML buff attaching"
---     vim.lsp.buf_attach_client(vim.api.nvim_get_current_buf(), client)
---   end
--- })

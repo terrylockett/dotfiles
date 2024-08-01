@@ -1,7 +1,7 @@
 return {
   -- "vim-test/vim-test",
 
-  "terrylockett/vim-test", 
+  "terrylockett/vim-test",
   branch = "fix-composite-project-tests",
 
   -- dir = "/Users/terry/github/vim-test" , -- local dev
@@ -14,7 +14,7 @@ return {
     vim.keymap.set("n", "<leader>tf", ":TestFile<CR>", {})
     vim.keymap.set("n", "<leader>ta", ":TestSuite<CR>", {})
     vim.keymap.set("n", "<leader>tl", ":TestLast<CR>", {})
-    -- vim.keymap.set("n", "<leader>g", ":TestVisit<CR>", {})
+		-- run tests in tmux pane.
     vim.cmd("let test#strategy = 'vimux'")
   end,
 }

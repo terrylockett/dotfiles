@@ -7,13 +7,8 @@ return {
 	config = function()
 		require("barbar").setup({
 			icons = {
-				-- default, powerline, slanted
 				preset = 'default',
 			},
-			-- sidebar_filetypes = {
-			-- 	NvimTree = true,
-			-- 	['neo-tree'] = {event = 'BufWipeout'}
-			-- },
 		})
 	end
 }

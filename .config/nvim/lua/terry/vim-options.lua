@@ -4,16 +4,28 @@ vim.cmd("set shiftwidth=4")
 vim.cmd("set noexpandtab") -- tabs goat 
 vim.cmd("set smartindent")
 
--- Set listchars
+-- Show whitespace characters
 vim.opt.listchars = {
-  eol = '¶',
-  space = "·",
+	-- eol = '¶',
+	space = "·",
 	tab = '» ',
-  trail = '·',
-  extends = '›',
-  precedes = '‹'
+	trail = '·',
+	extends = '›',
+	precedes = '‹'
 }
 vim.opt.list = true
+
+-- Treesitter folding 
+vim.wo.foldmethod = 'expr'
+vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
+vim.opt.foldlevelstart = 99 -- This should be enough.
+
+-- Confirm to save changes before exiting modified buffer
+vim.opt.confirm = true
+
+
+
+vim.opt.smoothscroll = true
 
 -- vim spell check (z= for suggestions)(zg add to dict)
 vim.opt.spelllang = 'en_us'
@@ -29,10 +41,8 @@ vim.opt.relativenumber = true
 -- incremental search
 vim.opt.incsearch = true
 
-
 -- always enable sign column to prevent screen "jumping"
 vim.opt.signcolumn = "yes"
-
 
 -- system clip board
 vim.opt.clipboard = "unnamed,unnamedplus"
@@ -42,7 +52,6 @@ vim.opt.cursorline = true
 
 -- keep cursor 8 lines in
 vim.opt.scrolloff = 8
-
 
 -- column width line
 vim.opt.colorcolumn = "100"

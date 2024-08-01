@@ -1,14 +1,12 @@
-
 local bundles = {
 	vim.fn.glob(os.getenv("JAVA_DEBUG"), 1),
 };
+vim.list_extend(bundles, vim.split(vim.fn.glob(os.getenv("JAVA_VSCODE_TEST"), 1), "\n"))
 
 local workspace_dir = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
 
-vim.list_extend(bundles, vim.split(vim.fn.glob(os.getenv("JAVA_VSCODE_TEST"), 1), "\n"))
 
---
--- This is a filthy hack for iteams master project as rootdir.
+-- Filthy hack for reasons.
 local root_path = ""
 local current_buf_path = vim.fn.expand('%:p:h');
 if(string.find(current_buf_path, "/ibm/scanners/") ) then

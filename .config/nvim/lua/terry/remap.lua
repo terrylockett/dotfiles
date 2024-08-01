@@ -30,7 +30,10 @@ vim.keymap.set('n', '<leader>o', vim.diagnostic.open_float, {})
 vim.keymap.set('n', '<M-3>', function() require("trouble").toggle() end)
 
 -- Debug Adapter
-vim.keymap.set("n", "<leader>b", function() require'dap'.toggle_breakpoint() end)
+vim.keymap.set("n", "<leader>db", function() require'dap'.toggle_breakpoint() end)
+vim.keymap.set("n", "<leader>dc", function() require'dap'.continue() end)
+vim.keymap.set("n", "<leader>djm", function() require'jdtls'.test_nearest_method() end)
+vim.keymap.set("n", "<leader>djc", function() require'jdtls'.test_class() end)
 
 -- NeoTest
 vim.keymap.set("n", "<leader>tc", function() require("neotest").run.run(vim.fn.expand("%")) end)

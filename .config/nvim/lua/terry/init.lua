@@ -1,5 +1,4 @@
 require("terry.remap")
-require("terry.urest-test")
 require("terry.vim-options")
 require("terry.vim-plug")
 

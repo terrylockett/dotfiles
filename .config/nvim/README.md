@@ -1,8 +1,8 @@
 ## Neovim Config
 
 ## Setup
-TODO
 
+Setup all of the environment variables
 
 #### Java
 - export JAVA_SE_11="/Library/Java/JavaVirtualMachines/jdk-11.0.16.1.jdk/Contents/Home"

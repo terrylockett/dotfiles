@@ -24,3 +24,7 @@ stow .
 ```
 ~/.zsh_env_vars
 ```
+
+
+#### Neovim setup
+See [nvim readme](.config/nvim/README.md)

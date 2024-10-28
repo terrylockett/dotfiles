@@ -48,9 +48,9 @@ map <leader>x~ <Action>(ExternalSystem.RefreshAllProjects)
 let g:WhichKeyDesc_gradle = "<leader>x Gradle"
 let g:WhichKeyDesc_gradle_harpoon_run = "<leader>xr Gradle Harpoon Run"
 let g:WhichKeyDesc_gradle_harpoon_edit = "<leader>xe Gradle Harpoon Edit"
-let g:WhichKeyDesc_gradle_refresh = "<leader>xe Gradle Refresh"
+let g:WhichKeyDesc_gradle_refresh = "<leader>x~Gradle Refresh"
 
-ap <leader>rK <Action>(ShowHoverInfo)
+map <leader>rK <Action>(ShowHoverInfo)
 map <leader>rn <Action>(RenameElement)
 map <leader>rf <Action>(ReformatCode)
 map <leader>ri <Action>(OptimizeImports)
@@ -81,6 +81,15 @@ let g:WhichKeyDesc_code_go_to_implementation = "<leader>gi Implementation"
 let g:WhichKeyDesc_code_go_to_back = "<leader>gb Back"
 let g:WhichKeyDesc_code_go_to_forward = "<leader>gb Forward"
 
+map <leader>ff <Action>(GotoFile)
+map <leader>fg <Action>(SearchEverywhere)
+map <leader>fc <Action>(GotoClass)
+let g:WhichKeyDesc_find = "<leader>f Find"
+let g:WhichKeyDesc_find_file = "<leader>ff Find Files"
+let g:WhichKeyDesc_find_all = "<leader>fg Find All"
+let g:WhichKeyDesc_find_class = "<leader>fc Find Class"
+
+
 map <leader>nn :NERDTreeToggle<CR>
 map <leader>no :NERDTree<CR>
 map <leader>nc :NERDTreeClose<CR>
@@ -100,10 +109,10 @@ map <leader>dc <Action>(DebugClass)
 map <leader>dr <Action>(Resume)
 let g:WhichKeyDesc_debug = "<leader>d Debug"
 let g:WhichKeyDesc_debug_breakpoint = "<leader>db Toggle Breakpoint"
-let g:WhichKeyDesc_debug_context = "<leader>dc Context"
+let g:WhichKeyDesc_debug_context = "<leader>dc Context
 let g:WhichKeyDesc_debug_resume = "<leader>dr Resume"
 " TODO Debug commands
-"" Map <leader>d to start debug
+" Map <leader>d to start debug
 "map <leader>d <Action>(Debug)
 
 

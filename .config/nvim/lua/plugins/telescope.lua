@@ -14,14 +14,25 @@ return {
 		config = function()
 			require("telescope").setup {
 				defaults = {
-					preview = {
-						hide_on_startup = true
+					mappings = {
+						i = {
+							['<C-p>'] = require('telescope.actions.layout').toggle_preview
+						}
 					},
-        },
+				},
+
+				preview = {
+					-- hide_on_startup = true
+				},
 				extensions = {
 					["ui-select"] = {
 						require("telescope.themes").get_dropdown {
 						}
+					}
+				},
+				pickers = {
+					find_files = {
+						hidden = true
 					}
 				}
 			}

@@ -4,6 +4,20 @@ vim.cmd("set shiftwidth=4")
 vim.cmd("set noexpandtab") -- tabs goat 
 vim.cmd("set smartindent")
 
+
+-- diagnostics only on current line.
+vim.diagnostic.config({
+	virtual_text = false,
+
+	virtual_lines = {
+		current_line = true,
+	},
+})
+
+-- border for popup windows
+vim.o.winborder = 'rounded'
+
+
 -- Show whitespace characters
 vim.opt.listchars = {
 	-- eol = '¶',
@@ -22,8 +36,6 @@ vim.opt.foldlevelstart = 99 -- This should be enough.
 
 -- Confirm to save changes before exiting modified buffer
 vim.opt.confirm = true
-
-
 
 vim.opt.smoothscroll = true
 

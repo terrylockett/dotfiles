@@ -23,6 +23,11 @@ imap <C-h> <Left>
 imap <C-l> <Right>
 imap <C-i> <CR>
 
+
+" Terminal.NewTab
+map <leader>ll <Action>(Terminal.NewTab)
+map <leader>lp <Action>(Terminal.MoveToEditor)
+
 map <leader>w :action IdeaVim.ReloadVimRc.reload<CR>
 let g:WhichKeyDesc_which_key_reload = "<leader>w Which-Key Reload"
 
@@ -44,11 +49,13 @@ let g:WhichKeyDesc_previous_tab = "<leader>, Previous Tab"
 
 map <leader>xe <Action>(ca.terrylockett.gradleharpoon.popup.EditHotkeyPopup)
 map <leader>xr <Action>(ca.terrylockett.gradleharpoon.popup.RunHotkeyPopup)
+map <leader>xc <Action>(ca.terrylockett.gradleharpoon.action.ResetHarpoonConfigs)
 map <leader>x~ <Action>(ExternalSystem.RefreshAllProjects)
 let g:WhichKeyDesc_gradle = "<leader>x Gradle"
 let g:WhichKeyDesc_gradle_harpoon_run = "<leader>xr Gradle Harpoon Run"
-let g:WhichKeyDesc_gradle_harpoon_edit = "<leader>xe Gradle Harpoon Edit"
-let g:WhichKeyDesc_gradle_refresh = "<leader>x~Gradle Refresh"
+let g:WhichKeyDesc_gradle_harpoon_edit  "<leader>xe Gradle Harpoon Edit"
+let g:WhichKeyDesc_gradle_harpoon_reset = "<leader>xc Gradle Harpoon Reset"
+let g:WhichKeyDesc_gradle_refresh = "<leader>x~ Gradle Refresh"
 
 map <leader>rK <Action>(ShowHoverInfo)
 map <leader>rn <Action>(RenameElement)
@@ -59,7 +66,7 @@ map <leader>rem <Action>(ExtractMethod)
 map <leader>rec <Action>(IntroduceConstant)
 map <leader>rev <Action>(IntroduceVariable)
 let g:WhichKeyDesc_code_actions = "<leader>r Code Actions"
-let g:WhichKeyDesc_code_actions_rename = "<leader>rn Rename"
+let g:WhichKeyDec_code_actions_rename = "<leader>rn Rename"
 let g:WhichKeyDesc_code_actions_hover_text = "<leader>rK Hover Text"
 let g:WhichKeyDesc_code_actions_reformat = "<leader>rf Reformat"
 let g:WhichKeyDesc_code_actions_imports = "<leader>ri Optimize Imports"
@@ -73,13 +80,13 @@ map <leader>gd <Action>(GotoDeclaration)
 map <leader>gr <Action>(FindUsages)
 map <leader>gi <Action>(GotoImplementation)
 map <leader>gb <Action>(Back)
-map <leader>gb <Action>(Forward)
+map <leader>gf <Action>(Forward)
 let g:WhichKeyDesc_code_go_to = "<leader>g Go To Code"
 let g:WhichKeyDesc_code_go_to_declaration = "<leader>gd Declaration"
 let g:WhichKeyDesc_code_go_to_usages = "<leader>gr References"
 let g:WhichKeyDesc_code_go_to_implementation = "<leader>gi Implementation"
 let g:WhichKeyDesc_code_go_to_back = "<leader>gb Back"
-let g:WhichKeyDesc_code_go_to_forward = "<leader>gb Forward"
+let g:WhichKeyDesc_code_go_to_forward = "<leader>gf Forward"
 
 map <leader>ff <Action>(GotoFile)
 map <leader>fg <Action>(SearchEverywhere)
@@ -100,7 +107,7 @@ let g:WhichKeyDesc_file_tree_open = "<leader>no open"
 let g:WhichKeyDesc_file_tree_close = "<leader>nc Close"
 let g:WhichKeyDesc_file_tree_current_file = "<leader>nm Current File"
 
-map <leader>tc <Action>(RunClass)
+map <leader>tc <Action>(RunCase)
 let g:WhichKeyDesc_test = "<leader>t Test"
 let g:WhichKeyDesc_test_context = "<leader>tc Context"
 
@@ -115,6 +122,12 @@ let g:WhichKeyDesc_debug_resume = "<leader>dr Resume"
 " Map <leader>d to start debug
 "map <leader>d <Action>(Debug)
 
+" -- Harpoon
+map <leader>ha <Action>(AddToHarpoon)
+map <leader>he <Action>(ShowHarpoon)
+let g:WhichKeyDesc_harpoon = "<leader>h Harpoon"
+let g:WhichKeyDesc_harpoon_add = "<leader>ha Harpoon Add"
+let g:WhichKeyDesc_harpoon_show = "<leader>he Harpoon Show"
 
 " --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
 Plug 'machakann/vim-highlightedyank'

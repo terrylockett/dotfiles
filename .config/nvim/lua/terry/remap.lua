@@ -1,9 +1,8 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
--- Telescope 
--- TODO this doesnt work :(
--- ccim.keymap.set('n', '<C-p>', function() require('telescope.actions.layout').toggle_preview() end)
+-- Markdown-preview
+vim.keymap.set("n", "<leader>mp", ":MarkdownPreview<CR>")
 
 -- JDTLS
 vim.keymap.set('n', '<M-r>', function() require("jdtls").update_project_config({select_mode="all"}) end)
@@ -14,8 +13,11 @@ vim.keymap.set('n', '<leader>gf', function() vim.lsp.buf.format( {
 }) end, {})
 
 -- NeoTree
-vim.keymap.set("n", "<leader>n", ":Neotree filesystem reveal left<CR>")
-vim.keymap.set("n", "<leader>N", ":Neotree filesystem close<CR>")
+vim.keymap.set("n", "<leader>nn", ":Neotree filesystem reveal<CR>")
+vim.keymap.set("n", "<leader>nN", ":Neotree filesystem close<CR>")
+
+-- UndoTree
+vim.keymap.set('n', '<leader>ut', vim.cmd.UndotreeToggle)
 
 -- LSP
 vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
@@ -34,6 +36,11 @@ vim.keymap.set("n", "<leader>db", function() require'dap'.toggle_breakpoint() en
 vim.keymap.set("n", "<leader>dc", function() require'dap'.continue() end)
 vim.keymap.set("n", "<leader>djm", function() require'jdtls'.test_nearest_method() end)
 vim.keymap.set("n", "<leader>djc", function() require'jdtls'.test_class() end)
+vim.keymap.set("n", "<leader>djp", function() require'jdtls'.pick_test() end)
+
+vim.keymap.set("n", "<leader>djt", function() require'jdtls'.test_nearest_method({
+	config_overrides={cwd="/Users/terry/ibm/scanners/master"}
+}) end)
 
 -- NeoTest
 vim.keymap.set("n", "<leader>tc", function() require("neotest").run.run(vim.fn.expand("%")) end)

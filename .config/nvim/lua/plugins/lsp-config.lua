@@ -2,59 +2,26 @@ return {
 	{
 		"mason-org/mason-lspconfig.nvim",
 		opts = {
-			-- ensure_installed = { "lua_ls", "rust_analyzer" },
+			automatic_enable = {
+					"lua_ls",
+					"gopls",
+					"gradle_ls",
+					"groovyls",
+					-- "tsserver",
+					"rust_analyzer",
+					-- "kotlin_language_server",
+					"lemminx",
+					"pyright",
+					"taplo", -- toml
+					"jsonls",
+					"bashls"
+			}
 		},
 		dependencies = {
 			{ "mason-org/mason.nvim", opts = {} },
 			"neovim/nvim-lspconfig",
 		},
 	},
-
-	-- {
-	-- 	"mason-org/mason-lspconfig.nvim",
-	-- 	opts = {
-	-- 		ensure_installed = { "lua_ls", "rust_analyzer" },
-	-- 	},
-	-- 	dependencies = {
-	-- 		{ "mason-org/mason.nvim", opts = {} },
-	-- 		"neovim/nvim-lspconfig",
-	-- 	},
-	-- }
-
-	-- { 'mason-org/mason.nvim', opts = {} },
-	-- {
-	-- 	'mason-org/mason-lspconfig.nvim',
-	-- 	dependencies = { 'neovim/nvim-lspconfig' },
-	-- 	opts = {}
-	-- },
-	--
-	-- {
-	-- 	"williamboman/mason.nvim",
-	-- 	config = function()
-	-- 		require("mason").setup()
-	-- 	end
-	-- },
-	-- {
-	-- 	"williamboman/mason-lspconfig.nvim",
-	-- 	config = function()
-	-- 		require("mason-lspconfig").setup({
-	-- 			-- ensure_installed = {
-	-- 			-- 	"lua_ls",
-	-- 			-- 	"gopls",
-	-- 			-- 	"gradle_ls",
-	-- 			-- 	"groovyls",
-	-- 			-- 	-- "tsserver",
-	-- 			-- 	"rust_analyzer",
-	-- 			-- 	-- "kotlin_language_server",
-	-- 			-- 	"lemminx",
-	-- 			-- 	"pyright",
-	-- 			-- 	"taplo", -- toml
-	-- 			-- 	"jsonls",
-	-- 			-- 	"bashls"
-	-- 			-- }
-	-- 		})
-	-- 	end
-	-- },
 	{
 		"neovim/nvim-lspconfig",
 		config = function()

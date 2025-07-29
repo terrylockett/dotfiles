@@ -35,6 +35,7 @@ return 	{
 				statusline = true,
 			},
 			window = {
+				position = "right",
 				auto_expand_width = false,
 			},
 		})

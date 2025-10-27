@@ -1,0 +1,38 @@
+
+[env]
+TERM="xterm-256color"
+
+[font]
+size=15
+
+[font.normal]
+family="JetBrainsMono Nerd Font"
+style="Regular"
+
+[font.bold]
+family="jetbrainsmono nerd font"
+style="Bold"
+
+[font.italic]
+family="jetbrainsmono nerd font"
+style="Italic"
+
+[font.bold_italic]
+family="jetbrainsmono nerd font"
+style="Bold Italic"
+
+
+[keyboard]
+bindings = [
+  # stop my fat fingers from closing terminal
+  {key= "W", mods= "Command", action= "None" }
+]
+
+[window]
+decorations="none"
+option_as_alt="both"
+
+[general]
+import = [
+  "~/.config/alacritty/catppuccin-macchiato.toml"
+]

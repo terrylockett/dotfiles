@@ -13,11 +13,15 @@ My configuration.
 
 
 #### Use Gnu Stow to symlink to ~/
+clone the repo with submodules \
+(standlone init submodules: `git submodule update --init --recursive`)
 ```bash
-git clone https://github.com/terrylockett/dotfiles.git
+git clone --recurse-submodules https://github.com/terrylockett/dotfiles.git
 cd dotfiles
+```
+link the modules
+```bash
 stow -d ./ -t ~ alacritty
 stow -d ./ -t ~ nvim
 stow -d ./ -t ~ tmux
-... etc
 ```

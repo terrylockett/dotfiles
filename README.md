@@ -12,14 +12,14 @@ My dotfiles.
 
 
 ### Usage
-#### clone the repo with submodules \
+#### clone the repo with submodules
 ```bash
 git clone --recurse-submodules https://github.com/terrylockett/dotfiles.git
 cd dotfiles
 ```
-standlone init submodules: `git submodule update --init --recursive`
+Standalone init submodules: `git submodule update --init --recursive`
 
-#### stow the modules
+#### stow the packages
 ```bash
 stow -d ./ -t ~ alacritty
 stow -d ./ -t ~ nvim

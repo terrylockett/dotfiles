@@ -1,10 +1,9 @@
 # Dotfiles
 
-My configuration.
+My dotfiles.
 
-# Setup Notes
-#### Requirements:
-- [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads) --> [Regular, Bold, Italic, Bold Italic]
+### Requirements
+- [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads)  --> `pacman -S ttf-jetbrains-mono-nerd`
 - Alacritty
 - Tmux
 - Neovim
@@ -12,14 +11,15 @@ My configuration.
 
 
 
-#### Use Gnu Stow to symlink to ~/
-clone the repo with submodules \
-(standlone init submodules: `git submodule update --init --recursive`)
+### Usage
+#### clone the repo with submodules \
 ```bash
 git clone --recurse-submodules https://github.com/terrylockett/dotfiles.git
 cd dotfiles
 ```
-link the modules
+standlone init submodules: `git submodule update --init --recursive`
+
+#### stow the modules
 ```bash
 stow -d ./ -t ~ alacritty
 stow -d ./ -t ~ nvim

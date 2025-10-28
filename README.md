@@ -3,6 +3,7 @@
 My dotfiles.
 
 ### Requirements
+- GNU Stow 2.4.1+
 - [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads)  --> `pacman -S ttf-jetbrains-mono-nerd`
 - Alacritty
 - Tmux
@@ -21,7 +22,5 @@ Standalone init submodules: `git submodule update --init --recursive`
 
 #### stow the packages
 ```bash
-stow -d ./ -t ~ alacritty
-stow -d ./ -t ~ nvim
-stow -d ./ -t ~ tmux
+stow alacritty
 ```

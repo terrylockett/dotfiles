@@ -10,9 +10,9 @@ My dotfiles.
     ```bash 
     git clone --recurse-submodules https://github.com/terrylockett/dotfiles.git
     ```
-    > [!NOTE]
-    > The git submodules need to be cloned for tmux styling to work.\
-    > Standalone init submodules: `git submodule update --init --recursive`
+> [!NOTE]
+> The git submodules need to be cloned for tmux styling to work.\
+> Standalone init submodules: `git submodule update --init --recursive`
 
 ### Usage
 1. navigate to dotfiles dir 

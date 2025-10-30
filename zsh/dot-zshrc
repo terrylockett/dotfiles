@@ -7,6 +7,10 @@ zstyle ':vcs_info:git:*' formats '%b '
 setopt PROMPT_SUBST
 PROMPT='%F{green} %F{blue}%1~%f %F{red}${vcs_info_msg_0_}%f$ '
 
+# enable for custom prompt completions.
+autoload -U compinit
+compinit
+
 source ~/.zsh_env_vars
 
 if [ -f ~/.zshrc_work ]; then

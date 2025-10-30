@@ -1,0 +1,38 @@
+#!/usr/bin/expect -f
+
+## Script to autofill prompts for ssh-copy-id
+
+# Get arguments from command line
+set timeout 10
+set host [lindex $argv 0]
+set user [lindex $argv 1]
+set password [lindex $argv 2]
+set keypub [lindex $argv 3]
+
+# Start SSH session
+spawn ssh-copy-id -f -i $keypub $user@$host
+
+expect {
+	"Are you sure you want to continue connecting " {
+		send "yes\r"
+		exp_continue
+	}
+	"password:" {
+		send "$password\r"
+	}
+	"Number of key(s) added:" {
+        # Successfully added the key
+    }
+    eof {
+        puts "SSH-copy-id failed or connection closed unexpectedly."
+        exit 1
+    }
+	timeout {
+		puts "Timeout occurred, no expected prompt found."
+		exit 1
+	}
+}
+
+expect eof
+puts "SSH key copied successfully to $user@$host"
+exit 0

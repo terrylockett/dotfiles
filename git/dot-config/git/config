@@ -3,7 +3,7 @@
   email = 5551818+terrylockett@users.noreply.github.com
 
 [includeIf "gitdir:~/ibm/"]
-  path = ~/.gitconfig-work
+  path = ~/.config/git/config.work
 
 [core]
   autocrlf = input

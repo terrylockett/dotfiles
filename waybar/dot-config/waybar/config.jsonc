@@ -11,9 +11,9 @@
 		// "backlight",
 		"battery",
 		"clock",
-		"tray",
-		"custom/lock",
-		"custom/power"
+		"tray"
+		// "custom/lock",
+		// "custom/power"
 	],
 	"hyprland/workspaces": {
 		"on-click": "activate",
@@ -96,7 +96,7 @@
 	},
 	"custom/lock": {
 		"tooltip": false,
-		"on-click": "sh -c '(sleep 0.5s; swaylock --grace 0)' & disown",
+		"on-click": "sh -c '(sleep 0.5s; hyprlock --grace 0)' & disown",
 		"format": "",
 	},
 	"custom/power": {

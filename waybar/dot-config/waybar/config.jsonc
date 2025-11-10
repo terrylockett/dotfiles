@@ -9,7 +9,7 @@
 		"pulseaudio",
 		"network",
 		// "backlight",
-		// "battery",
+		"battery",
 		"clock",
 		"tray",
 		"custom/lock",
@@ -64,15 +64,16 @@
 		"format-icons": ["", "", "", "", "", "", "", "", ""]
 	},
 	"battery": {
+		"interval": 15,
 		"states": {
 			"warning": 30,
 			"critical": 15
 		},
-		"format": "{icon}",
-		"format-charging": "",
-		"format-plugged": "",
-		"format-alt": "{icon}",
-		"format-icons": ["", "",  "", "", "", "", "", "", "", "", "", ""]
+		"format": "{icon} {capacity}%",
+		"format-charging": "󰢝  {capacity}%",
+		"format-plugged": "  {capacity}%",
+		// "format-alt": "{time}",
+		"format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
 	},
 	"pulseaudio": {
 		// "scroll-step": 1, // %, can be a float

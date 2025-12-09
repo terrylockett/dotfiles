@@ -41,7 +41,7 @@ vim.opt.smoothscroll = true
 
 -- vim spell check (z= for suggestions)(zg add to dict)
 vim.opt.spelllang = 'en_us'
-vim.opt.spell = true
+vim.opt.spell = false
 
 -- 24 bit color bby
 vim.opt.termguicolors = true

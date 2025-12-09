@@ -4,6 +4,13 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 -- Markdown-preview
 vim.keymap.set("n", "<leader>mp", ":MarkdownPreview<CR>")
 
+-- Toggle spelling
+vim.keymap.set('n', '<Leader>z', function() vim.opt.spell = not(vim.opt.spell:get()) end)
+
+-- Toggle Inlay Hints
+vim.keymap.set("n", "<leader>i", function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()) end )
+
+
 -- JDTLS
 vim.keymap.set('n', '<M-r>', function() require("jdtls").update_project_config({select_mode="all"}) end)
 vim.keymap.set('n', '<M-~>', function() require('jdtls.setup').wipe_data_and_restart()  end)

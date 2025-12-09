@@ -65,10 +65,12 @@ vim.keymap.set("n", "<leader>tl", function() require("neotest").run.run({vim.fn.
 	-- move tabs 
 vim.keymap.set('n', '<leader>,', '<Cmd>BufferPrevious<CR>', {})
 vim.keymap.set('n', '<leader>.', '<Cmd>BufferNext<CR>', {})
+vim.keymap.set('n', '<Tab>', '<Cmd>BufferNext<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<S-Tab>', '<Cmd>BufferPrevious<CR>', { noremap = true, silent = true })
 
 	-- reorder tabs
-vim.keymap.set('n', '<M->>', '<Cmd>BufferMoveNext<CR>', {})
-vim.keymap.set('n', '<M-<>', '<Cmd>BufferMovePrevious<CR>', {})
+vim.keymap.set('n', '<M-l>', '<Cmd>BufferMoveNext<CR>', {})
+vim.keymap.set('n', '<M-h>', '<Cmd>BufferMovePrevious<CR>', {})
 	--close Buffer
 vim.keymap.set('n', '<M-w>', '<Cmd>BufferClose<CR>', {})
 

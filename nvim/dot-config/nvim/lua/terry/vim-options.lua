@@ -17,6 +17,9 @@ vim.diagnostic.config({
 -- border for popup windows
 vim.o.winborder = 'rounded'
 
+-- save that precious relestate
+vim.opt.cmdheight = 0
+
 
 -- Show whitespace characters
 vim.opt.listchars = {

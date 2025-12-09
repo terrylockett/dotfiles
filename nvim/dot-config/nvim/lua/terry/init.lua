@@ -22,11 +22,12 @@ local opts = {}
 -- Lazy Package Manager
 require("lazy").setup("plugins")
 
-vim.cmd.colorscheme "catppuccin-macchiato"
+vim.cmd.colorscheme "nord"
+-- vim.cmd.colorscheme "catppuccin-macchiato"
 -- Quickshot customization
-local colors = require("catppuccin.palettes").get_palette()
-vim.api.nvim_set_hl(0, 'QuickScopePrimary', { fg = colors.blue, bold=true, underline=true, })
-vim.api.nvim_set_hl(0, 'QuickScopeSecondary', { fg = colors.pink, bold=true, underline=true, })
+-- local colors = require("catppuccin.palettes").get_palette()
+-- vim.api.nvim_set_hl(0, 'QuickScopePrimary', { fg = colors.blue, bold=true, underline=true, })
+-- vim.api.nvim_set_hl(0, 'QuickScopeSecondary', { fg = colors.pink, bold=true, underline=true, })
 
 
 vim.cmd[[

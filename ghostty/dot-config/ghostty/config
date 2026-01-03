@@ -3,4 +3,4 @@
 macos-option-as-alt = true
 
 theme = Nord
-window-decoration = "none"
+window-decoration = none

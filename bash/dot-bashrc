@@ -21,3 +21,13 @@ alias sz="source ~/.bashrc"
 alias ..="cd .."
 alias la="ls -la"
 alias ll="ls -l"
+
+
+# Add go/bin to path
+GOBIN=~/go/bin
+if [[ -d "$GOBIN" ]]; then
+	if [[ ":$PATH:" != *":$GOBIN:"* ]]; then
+		export PATH="$PATH:$GOBIN"
+		echo "adding"
+	fi
+fi

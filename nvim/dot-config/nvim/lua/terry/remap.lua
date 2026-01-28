@@ -1,6 +1,9 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
+-- alternate Write
+vim.keymap.set("n", "<leader>w", ":w<CR>", { silent = true })
+
 -- Markdown-preview
 vim.keymap.set("n", "<leader>mp", ":MarkdownPreview<CR>")
 

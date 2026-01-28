@@ -9,6 +9,14 @@ return {
 			vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 			vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
 			vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+			vim.keymap.set('n', '<leader>fz', builtin.spell_suggest, { desc = 'Telescope spell' })
+			vim.keymap.set('n', '<leader>fm', builtin.marks, { desc = 'Telescope marks' })
+			vim.keymap.set('n', '<leader>fd', builtin.diagnostics, { desc = 'Telescope diagnostics' })
+			vim.keymap.set('n', '<leader>fs', builtin.lsp_document_symbols, { desc = 'Telescope doc symbols' })
+			vim.keymap.set('n', '<leader>fgr', builtin.lsp_references, { desc = 'Telescope doc symbols' })
+
+
+			vim.keymap.set('n', '<leader>fj', builtin.jumplist, { desc = 'Telescope jump list' })
 		end
 	},
 	{

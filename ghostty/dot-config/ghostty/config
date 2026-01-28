@@ -4,3 +4,8 @@ macos-option-as-alt = true
 
 theme = Nord
 window-decoration = none
+
+# Disable font ligatures
+font-feature = -dlig
+font-feature = -liga
+font-feature = -calt

@@ -42,7 +42,8 @@ return {
 				},
 				pickers = {
 					find_files = {
-						hidden = true
+						hidden = true,
+						layout_config={width=0.9}
 					}
 				}
 			}

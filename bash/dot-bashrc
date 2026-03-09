@@ -28,6 +28,5 @@ GOBIN=~/go/bin
 if [[ -d "$GOBIN" ]]; then
 	if [[ ":$PATH:" != *":$GOBIN:"* ]]; then
 		export PATH="$PATH:$GOBIN"
-		echo "adding"
 	fi
 fi

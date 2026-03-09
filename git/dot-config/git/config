@@ -5,6 +5,9 @@
 [includeIf "gitdir:~/ibm/"]
   path = ~/.config/git/config.work
 
+[includeIf "gitdir:~/gittea/"]
+  path = ~/.config/git/config.home
+
 [core]
   autocrlf = input
 

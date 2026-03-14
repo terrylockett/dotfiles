@@ -7,8 +7,8 @@
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-PS1='[\u@\h \W]\$ '
-
+# PS1='[\u@\h \W]\$ '
+PS1='\[\033[0;32m\] \[\e[1;34m\]\W \[\e[0m\]\$ '
 
 # alias
 alias v="nvim"

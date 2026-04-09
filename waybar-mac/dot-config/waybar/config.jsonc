@@ -84,7 +84,8 @@
     "temperature": {
         "critical-threshold": 80,
         "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format-icons": ["", "", ""],
+		"thermal-zone": 1
     },
     "backlight": {
         "format": "{percent}% {icon}",

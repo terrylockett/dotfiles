@@ -30,7 +30,8 @@ imap <C-i> <CR>
 map <leader>ll <Action>(Terminal.NewTab)
 map <leader>lp <Action>(Terminal.MoveToEditor)
 
-map <leader>w :action IdeaVim.ReloadVimRc.reload<CR>
+"map <leader>w :action IdeaVim.ReloadVimRc.reload<CR>
+map <leader>w :source ~/.ideavimrc<CR>
 let g:WhichKeyDesc_which_key_reload = "<leader>w Which-Key Reload"
 
 map ]d <Action>(GotoNextError)
@@ -49,9 +50,9 @@ map <leader>, <Action>(PreviousTab)
 let g:WhichKeyDesc_next_tab = "<leader>. Next Tab"
 let g:WhichKeyDesc_previous_tab = "<leader>, Previous Tab"
 
-map <leader>xe <Action>(ca.terrylockett.gradleharpoon.popup.EditHotkeyPopup)
-map <leader>xr <Action>(ca.terrylockett.gradleharpoon.popup.RunHotkeyPopup)
-map <leader>xc <Action>(ca.terrylockett.gradleharpoon.action.ResetHarpoonConfigs)
+map <leader>xe <Action>(ca.terrylockett.gradleharpoon.window.EditHarpoonWindow)
+map <leader>xr <Action>(ca.terrylockett.gradleharpoon.window.RunHarpoonWindow)
+map <leader>xc <Action>(ca.terrylockett.gradleharpoon.action.ResetHarpoonConfigurations)
 map <leader>x~ <Action>(ExternalSystem.RefreshAllProjects)
 let g:WhichKeyDesc_gradle = "<leader>x Gradle"
 let g:WhichKeyDesc_gradle_harpoon_run = "<leader>xr Gradle Harpoon Run"
